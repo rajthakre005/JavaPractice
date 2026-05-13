@@ -28,12 +28,12 @@ public class Calculator{
             System.out.println("Result:"+(num1 / num2));
             break;
         default:
-            throw new IllegalArgumentException("Invalid input");
+            throw new IllegalArgumentException("Invalid Operator");
         }
 	}catch(ArithmeticException e){
 	System.out.println("Error"+e.getMessage());
 	}catch(Exception e){
-	System.out.println("Invalid");
+	System.out.println("Invalid Input");
 	}
         System.out.println("Do you want to continue(1 for yes and 2 for no):");
         choice = sc.nextInt();
