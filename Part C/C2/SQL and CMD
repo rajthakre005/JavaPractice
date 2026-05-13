@@ -1,1 +1,15 @@
+SQL code:-
+CREATE DATABASE college;
 
+USE college;
+
+CREATE TABLE student(
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    age INT,
+    course VARCHAR(50)
+);
+
+CMD Code:-
+javac -cp ".;mysql-connector-j-9.3.0-bin.jar" *.java
+java -cp ".;mysql-connector-j-9.3.0-bin.jar" StudentManagement
