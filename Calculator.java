@@ -13,6 +13,7 @@ public class Calculator{
         num2 = sc.nextDouble();
         System.out.println("Enter a operator +,-,*,/");
         operator = sc.next().charAt(0);
+	try{
         switch(operator){
         case '+':
             System.out.println("Result:"+(num1 + num2));
@@ -27,8 +28,13 @@ public class Calculator{
             System.out.println("Result:"+(num1 / num2));
             break;
         default:
-            System.out.println("Invalid Input");
+            throw new IllegalArgumentException("Invalid input");
         }
+	}catch(ArithmeticException e){
+	System.out.println("Error"+e.getMessage());
+	}catch(Exception e){
+	System.out.println("Invalid");
+	}
         System.out.println("Do you want to continue(1 for yes and 2 for no):");
         choice = sc.nextInt();
         }while(choice == 1);
